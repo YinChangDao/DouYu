@@ -8,8 +8,8 @@
 
 import UIKit
 
-let kStatusBarH : Float = 20
-let kNaviH : Float = 44
+let kStatusBarH : CGFloat = 20
+let kNaviH : CGFloat = 44
 
 let kScreenW = UIScreen.main.bounds.size.width
 let kScreenH = UIScreen.main.bounds.size.height

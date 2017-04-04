@@ -8,7 +8,31 @@
 
 import UIKit
 
+private let kTitleViewH : CGFloat = 40
+
 class HomeViewController: UIViewController {
+    fileprivate lazy var pageTitleView : PageTitleView = {
+        let titleFrame = CGRect(x: 0, y: kStatusBarH + kNaviH, width: kScreenW, height: kTitleViewH)
+        let titles = ["推荐", "手游", "游戏", "娱乐", "趣玩"]
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        return titleView
+    }()
+    
+    fileprivate lazy var pageContentView : PageContentView = {
+        let contentH = kScreenH - kStatusBarH - kNaviH - kTitleViewH
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNaviH + kTitleViewH, width: kScreenW, height: contentH)
+        
+        var childVcs = [UIViewController]()
+        for _ in 0..<5 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255))
+                , b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentVc: self)
+        return contentView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +45,11 @@ class HomeViewController: UIViewController {
 // 设置UI
 extension HomeViewController {
     fileprivate func setupUI() {
+        // 不需要调整UIScrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
         setupNavigationBar()
+        view.addSubview(pageTitleView)
+        view.addSubview(pageContentView)
     }
     
     fileprivate func setupNavigationBar() {
