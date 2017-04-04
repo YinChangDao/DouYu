@@ -32,7 +32,7 @@
         <scene sceneID="3sH-b1-Wgi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dX8-gf-lJe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" id="O10-Hr-gKh"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="tabDiscovery" selectedImage="tabDiscoveryHL" id="O10-Hr-gKh"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="F6t-nG-Qyg">
@@ -49,4 +49,8 @@
             <point key="canvasLocation" x="511.19999999999999" y="-48.125937031484263"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabDiscovery" width="24" height="24"/>
+        <image name="tabDiscoveryHL" width="24" height="24"/>
+    </resources>
 </document>

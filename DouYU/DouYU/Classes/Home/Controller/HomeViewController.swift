@@ -16,6 +16,10 @@ class HomeViewController: UIViewController {
         setupUI()
     
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 
 }
 
@@ -26,6 +30,7 @@ extension HomeViewController {
     }
     
     fileprivate func setupNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
+        navigationController?.navigationBar.barTintColor = UIColor.orange
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "homeLogoIcon")
     }
 }

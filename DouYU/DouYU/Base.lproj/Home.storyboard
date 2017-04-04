@@ -32,7 +32,7 @@
         <scene sceneID="PQF-io-uPw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iux-Mj-FTF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="LzM-2D-ETe"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tabHome" selectedImage="tabHomeHL" id="LzM-2D-ETe"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="llT-17-j3I">
@@ -49,4 +49,8 @@
             <point key="canvasLocation" x="178.40000000000001" y="-416.0419790104948"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabHome" width="24" height="24"/>
+        <image name="tabHomeHL" width="24" height="24"/>
+    </resources>
 </document>

@@ -98,8 +98,8 @@
 				141B7F2E1E87FF0400A89835 /* Home */,
 				141B7F2F1E87FF0400A89835 /* Live */,
 				141B7F2D1E87FF0400A89835 /* Follow */,
-				141B7F311E87FF0400A89835 /* Profile */,
 				14F84A911E895BE4007EBEDB /* Discovery */,
+				141B7F311E87FF0400A89835 /* Profile */,
 				141B7F321E87FF0400A89835 /* Tools */,
 			);
 			path = Classes;
@@ -119,7 +119,6 @@
 				14F84A951E895E43007EBEDB /* Controller */,
 				14F84A961E895E43007EBEDB /* Model */,
 				14F84A971E895E43007EBEDB /* View */,
-				14F84A7F1E895769007EBEDB /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -227,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				14F84A981E895E64007EBEDB /* HomeViewController.swift */,
+				14F84A7F1E895769007EBEDB /* Home.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,7 +456,7 @@
 				14F84A801E895769007EBEDB /* Base */,
 			);
 			name = Home.storyboard;
-			path = ../Main;
+			path = ../../Main;
 			sourceTree = "<group>";
 		};
 		14F84A841E8957BA007EBEDB /* Follow.storyboard */ = {
