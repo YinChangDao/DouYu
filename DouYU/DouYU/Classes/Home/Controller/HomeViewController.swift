@@ -16,11 +16,6 @@ class HomeViewController: UIViewController {
         setupUI()
     
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
-
 }
 
 // 设置UI
