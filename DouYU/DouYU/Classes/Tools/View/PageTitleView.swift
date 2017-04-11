@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate : class {
+    func pageTitleView(titleView : PageTitleView, selectedIndex index : Int)
+}
+
 private let pageCtlH : CGFloat = 3.0
 
 class PageTitleView: UIView {
     
+    fileprivate var currentIndex : Int = 0
     fileprivate var titles : [String]
+    weak var delegate : PageTitleViewDelegate?
     
     fileprivate var titleLbs : [UILabel] = [UILabel]()
     
@@ -63,7 +69,11 @@ extension PageTitleView {
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 16.0)
-            label.textColor = UIColor.darkGray
+            if index == 0 {
+                label.textColor = UIColor.orange
+            } else {
+                label.textColor = UIColor.darkGray
+            }
             label.textAlignment = .center
             
             
@@ -73,7 +83,10 @@ extension PageTitleView {
             titleLbs.append(label)
             
             scrollView.addSubview(label)
-
+            
+            label.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(tapGes:)))
+            label.addGestureRecognizer(tapGesture)
         }
     }
     
@@ -88,5 +101,24 @@ extension PageTitleView {
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - pageCtlH, width: firstLabel.frame.size.width, height: pageCtlH)
         
+    }
+}
+
+extension PageTitleView {
+    @objc fileprivate func titleLabelClick(tapGes: UITapGestureRecognizer) {
+        guard let currentLb = tapGes.view as? UILabel else {return}
+        let previousLb = titleLbs[currentIndex]
+        
+        currentLb.textColor = UIColor.orange
+        previousLb.textColor = UIColor.darkGray
+        
+        currentIndex = currentLb.tag
+        
+        let scrollLineX = CGFloat(currentLb.tag) * scrollLine.bounds.size.width
+        UIView.animate(withDuration: 0.15) {
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
     }
 }
