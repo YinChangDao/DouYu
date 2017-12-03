@@ -1,2 +1,4 @@
 # DouYu
-live streaming.
+
+> Live streaming.
+> iOS 9.0 and later.
