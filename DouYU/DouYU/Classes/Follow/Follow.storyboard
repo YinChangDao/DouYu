@@ -30,11 +30,11 @@
             </objects>
             <point key="canvasLocation" x="1117.5999999999999" y="-416.0419790104948"/>
         </scene>
-        <!--首页-->
+        <!--关注-->
         <scene sceneID="rYy-ZX-PvC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nsC-Yo-zhJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="tabHome" selectedImage="tabHomeHL" id="P39-cb-d4p"/>
+                    <tabBarItem key="tabBarItem" title="关注" image="tabFocus" selectedImage="tabFocusHL" id="P39-cb-d4p"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UYc-lD-F6r">
@@ -52,7 +52,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabHome" width="24" height="24"/>
-        <image name="tabHomeHL" width="24" height="24"/>
+        <image name="tabFocus" width="24" height="24"/>
+        <image name="tabFocusHL" width="24" height="24"/>
     </resources>
 </document>

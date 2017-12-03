@@ -30,11 +30,11 @@
             </objects>
             <point key="canvasLocation" x="1117.5999999999999" y="-416.0419790104948"/>
         </scene>
-        <!--首页-->
+        <!--鱼吧-->
         <scene sceneID="gzM-Ot-7G9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="McV-WZ-eUy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="tabHome" selectedImage="tabHomeHL" id="ma9-fe-J8c"/>
+                    <tabBarItem key="tabBarItem" title="鱼吧" image="tabDiscovery" selectedImage="tabDiscoveryHL" id="ma9-fe-J8c"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HH5-6m-ddc">
@@ -52,7 +52,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabHome" width="24" height="24"/>
-        <image name="tabHomeHL" width="24" height="24"/>
+        <image name="tabDiscovery" width="24" height="24"/>
+        <image name="tabDiscoveryHL" width="24" height="24"/>
     </resources>
 </document>
