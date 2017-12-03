@@ -14,9 +14,9 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         
         addChildVc(vcName: "Home")
-        addChildVc(vcName: "Live")
+        addChildVc(vcName: "Category")
         addChildVc(vcName: "Follow")
-        addChildVc(vcName: "Discovery")
+        addChildVc(vcName: "Forum")
         addChildVc(vcName: "Profile")
         
     }
